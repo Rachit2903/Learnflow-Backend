@@ -42,12 +42,7 @@ app.use("/", require("./routes/index.js"));
 app.use("/post", require("./routes/post.js"));
 app.use("/comment", require("./routes/comment.js"));
 app.use("/upload", require("./routes/upload.js"))
-app.get("/internal-server-error", (req, res) => {
-    res.render("error-500");
-})
-app.get("/*", (req, res) => {
-    res.render("error-404");
-})
+
 app.listen(PORT, () => {
     console.log(`server running on port ${PORT}`);
 })
