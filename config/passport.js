@@ -9,7 +9,7 @@ passport.use(
     new GoogleStratagy({
         clientID: clientID,
         clientSecret: clientSecret,
-        callbackURL: "http://localhost:5000/auth/google/callback",
+        callbackURL: googleRedirectURI,
     },
         async (accessToken, refreshToken, profile, done) => {
             const newUser = {
